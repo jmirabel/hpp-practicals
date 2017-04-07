@@ -123,5 +123,5 @@ robot.client.basic.problem.setMaxIterations (40)
 
 ps = ProblemSolver (robot)
 vf = ViewerFactory (ps)
-gripperName = 'ur5/wrist_3_link-tool0_fixed_joint'
-ballName = 'pokeball/base_joint_SO3'
+gripperName = 'ur5/tool0'
+ballName = 'pokeball/base_link'

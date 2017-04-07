@@ -3,12 +3,12 @@ from manipulation import robot, vf, ConstraintGraph, ps, Ground, Box, Pokeball, 
 
 vf.loadEnvironmentModel (Ground, 'ground')
 vf.loadObjectModel (Pokeball, 'pokeball')
-robot.setJointBounds ('pokeball/base_joint_xyz', [-.4,.4,-.4,.4,-.1,1.])
+robot.setJointBounds ('pokeball/root_joint', [-.4,.4,-.4,.4,-.1,1.,1,0,1,0,1,0,1,0])
 
-r = vf.createViewer ()
+# r = vf.createViewer ()
 
-q1 = [0, -1.57, 1.57, 0, 0, 0, .3, 0, 0.025, 1, 0, 0, 0]
-r (q1)
+q1 = [0, -1.57, 1.57, 0, 0, 0, .3, 0, 0.025, 0, 0, 0, 1]
+# r (q1)
 
 ## Create constraint graph
 graph = ConstraintGraph (robot, 'graph')
@@ -26,9 +26,9 @@ graph.createEdge ('grasp', 'placement', 'release-ball', 1, 'placement')
 
 ## Create transformation constraint : ball is in horizontal plane with free
 ## rotation around z
-ps.createTransformationConstraint ('placement', 'pokeball/base_joint_SO3', '', [0,0,0.025,1,0,0,0], [False, False, True, True, True, False,])
+ps.createTransformationConstraint ('placement'           , 'pokeball/root_joint', '', [0,0,0.025,0,0,0,1], [False, False, True, True, True, False,])
 #  Create complement constraint
-ps.createTransformationConstraint ('placement/complement', 'pokeball/base_joint_SO3', '', [0,0,0.025,1,0,0,0], [True, True, False, False, False, True,])
+ps.createTransformationConstraint ('placement/complement', 'pokeball/root_joint', '', [0,0,0.025,0,0,0,1], [True, True, False, False, False, True,])
 
 ps.setConstantRightHandSide ('placement', True)
 ps.setConstantRightHandSide ('placement/complement', False)
@@ -59,9 +59,9 @@ ps.setInitialConfig (q_init)
 ps.addGoalConfig (q_goal)
 ps.selectPathValidation ("Dichotomy", 0)
 
-pp = PathPlayer (ps.client.basic, r)
+# pp = PathPlayer (ps.client.basic, r)
 
-## Build relative position of the ball with respect to the gripper
+# Build relative position of the ball with respect to the gripper
 for i in range (100):
   q = robot.shootRandomConfig ()
   res,q3,err = graph.generateTargetConfig ('grasp-ball', q_init, q)
