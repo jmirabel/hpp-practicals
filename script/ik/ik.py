@@ -1,8 +1,10 @@
+from __future__ import print_function
 from hpp.corbaserver.ur5 import Robot
-from hpp.corbaserver import ProblemSolver
+from hpp.corbaserver import ProblemSolver, newProblem
 from hpp.gepetto import ViewerFactory, PathPlayer
 from projection_helper import computeJacobian
 
+newProblem()
 robot = Robot ('ur5')
 ps = ProblemSolver (robot)
 
@@ -17,7 +19,7 @@ gui = r.client.gui
 scene = "target"
 r.client.gui.createScene(scene)
 boxname = scene+"/t0"
-target = [0,0,0,1,0,0,0]
+target = [0,0,0,0,0,0,1]
 gui.addBox(boxname,0.03,0.03,0.03, [1,1,1,1])
 gui.applyConfiguration(boxname,target)
 gui.addSceneToWindow(scene,0)
@@ -44,7 +46,7 @@ from time import sleep
 def ik(x,y,z):
 	#set visual marker target
 	updateTarget(x,y,z)
-	print "TODO: implement inverse kinematics"	
+	print ("TODO: implement inverse kinematics")
 		
 ik(-0.42, 0.03, 0.8)
 ik(0.42, 0.03, 0.8)

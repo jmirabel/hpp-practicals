@@ -4,17 +4,17 @@ from manipulation import robot, vf, ConstraintGraph, ps, Ground, Box, Pokeball, 
 
 vf.loadEnvironmentModel (Ground, 'ground')
 vf.loadEnvironmentModel (Box, 'box')
-vf.moveObstacle ('box/base_link_0', [0.3+0.04, 0, 0.04, 1, 0, 0, 0])
-vf.moveObstacle ('box/base_link_1', [0.3-0.04, 0, 0.04, 1, 0, 0, 0])
-vf.moveObstacle ('box/base_link_2', [0.3, 0.04, 0.04, 1, 0, 0, 0])
-vf.moveObstacle ('box/base_link_3', [0.3, -0.04, 0.04, 1, 0, 0, 0])
+vf.moveObstacle ('box/base_link_0', [0.3+0.04, 0, 0.04, 0, 0, 0, 1])
+vf.moveObstacle ('box/base_link_1', [0.3-0.04, 0, 0.04, 0, 0, 0, 1])
+vf.moveObstacle ('box/base_link_2', [0.3, 0.04, 0.04, 0, 0, 0, 1])
+vf.moveObstacle ('box/base_link_3', [0.3, -0.04, 0.04, 0, 0, 0, 1])
 
 vf.loadObjectModel (Pokeball, 'pokeball')
 robot.setJointBounds ('pokeball/base_joint_xyz', [-.4,.4,-.4,.4,-.1,1.])
 
 r = vf.createViewer ()
 
-q1 = [0, -1.57, 1.57, 0, 0, 0, .3, 0, 0.025, 1, 0, 0, 0]
+q1 = [0, -1.57, 1.57, 0, 0, 0, .3, 0, 0.025, 0, 0, 0, 1]
 r (q1)
 
 ## Create graph

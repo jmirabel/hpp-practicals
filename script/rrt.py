@@ -1,7 +1,8 @@
 from hpp.corbaserver.ur5 import Robot
-from hpp.corbaserver import ProblemSolver
+from hpp.corbaserver import ProblemSolver, newProblem
 from hpp.gepetto import ViewerFactory, PathPlayer
 
+newProblem()
 robot = Robot ('ur5')
 ps = ProblemSolver (robot)
 
