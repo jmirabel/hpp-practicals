@@ -94,14 +94,14 @@ class ConstraintGraph (Parent) :
     ## Add a configuration to the roadmap.
     # \param config to be added to the roadmap.
     def addConfigToRoadmap (self, config):
-	return self.clientBasic.problem.addConfigToRoadmap(config)
+        return self.clientBasic.problem.addConfigToRoadmap(config)
 
     ## Add an edge to roadmap. If
     # \param config1, config2 the ends of the path,
     # \param pathId the index if the path in the vector of path,
     # \param bothEdges if FALSE, only add config1 to config2, otherwise, If TRUE. add edges config1->config2 AND config2->config1.
     def addEdgeToRoadmap (self, config1, config2, pathId, bothEdges):
-	return self.clientBasic.problem.addEdgeToRoadmap \
+        return self.clientBasic.problem.addEdgeToRoadmap \
           (config1, config2, pathId, bothEdges)
 
     ## Set that an edge is short
