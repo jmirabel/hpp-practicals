@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <meta name="generator" content="AsciiDoc 8.6.9" />
-<title>Implementing an inverse kinematics algorithm</title>
+<title>Implementing an inverse kinematics solver</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
 
@@ -749,53 +749,79 @@ asciidoc.install(2);
 <div class="sect1">
 <h2 id="_instructions">Instructions</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Open a terminal cd into  $DEVEL_DIR/src/hpp-practicals directory, and type</p></div>
+<div class="paragraph"><p>As before, open 3 terminals.
+In the first terminal, type</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.6
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>hppcorbaserver</tt></pre></div></div>
+<div class="paragraph"><p>In the second terminal, type</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt>gepetto-gui</tt></pre></div></div>
+<div class="paragraph"><p>In the third terminal, cd into hpp-practicals directory and type</p></div>
+<div class="listingblock">
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
 <pre><tt>cd script/ik
-./run.sh ik<span style="color: #990000">.</span>py</tt></pre></div></div>
+ipython -i ik<span style="color: #990000">.</span>py</tt></pre></div></div>
 <div class="paragraph"><p>You should see the manipulator robot ur-5 in an empty scene.</p></div>
-<div class="paragraph"><p>In the third terminal, you should see the message "TODO: implement inverse kinematics solver". Open file <code>script/ik.py</code> in a text editor. The message is produced by the method <code>ik</code>.</p></div>
+<div class="paragraph"><p>In the third terminal, you should see the message "TODO: implement inverse kinematics solver". Open file <code>script/ik.py</code> in a text editor. The message is produced by the function <code>ik</code>.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_exercise">Question 1</h2>
+<h2 id="_question_1">Question 1</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Fill the method <code>ik</code> such that it solves iteratively the inverse kinematics problem to match the end effector joint (<code>wrist_3_joint</code>) with the target 3D position passed as parameter.
 To approximate the inverse method of the jacobian matrix, use the jacobian transpose method. To visualize the solver output at each step
-of the algorithm, display the temporary configuration obtained at each step, and use an active pause mechanism to obtain a constant refreshing step. For instance, you can use the <code>sleep</code> python method with a value of 1./60. to obtain a 60 frames par second rate.</p></div>
-
-<div class="paragraph"><p>What is the issue with the last target given in the example file? How can you deal with the issue?</p></div>
-
+of the algorithm, display the temporary configuration obtained at each step, and use an active pause mechanism to obtain a constant refreshing step. For instance, you can use the <code>sleep</code> python method with a value of <code>1./25.</code> to obtain about <code>25</code> frames par second rate.</p></div>
+<div class="paragraph"><p>What is the issue with the last target given in the example file ?
+How can you deal with the issue ?</p></div>
+</div>
+</div>
 <div class="sect1">
-<h2 id="_exercise">Question 2</h2>
+<h2 id="_question_2">Question 2</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Compare the jacobian transpose method with the pseudo inverse method (Look in the numpy API to find the pseudo inverse method). In particular,
-observe the behaviour of the two solvers when going from the first to the second target. Explain what is happening and why. Which solver is the faster to converge? </p></div>
-
-
+<div class="paragraph"><p>Compare the jacobian transpose method with the pseudo inverse method (Look in the numpy API to find the pseudo inverse method).
+In particular, observe the behaviour of the two solvers when going from the first to the second target.</p></div>
+<div class="paragraph"><p>Explain what is happening and why. Which solver is the faster to converge ?</p></div>
+</div>
+</div>
 <div class="sect1">
-<h2 id="_exercise">Question 3</h2>
+<h2 id="_question_3">Question 3</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>Using the method <code>setJointBounds</code> of the <code>Robot</code> class, define joint limits for the joint of the robot.
-Propose and implement a way to handle joint limits in the inverse kinematics solver.</p></div>
-
-
+<div class="paragraph"><p>Using the method <code>setJointBounds</code> of the <code>Robot</code> class, define joint limits for the joint of the robot.</p></div>
+<div class="paragraph"><p>Propose and implement a way to handle joint limits in the inverse kinematics solver.</p></div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_hint">Hint</h2>
+<div class="sectionbody">
+<div class="sect2">
 <h3 id="_some_useful_methods">Some useful methods</h3>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.6
+<div class="content"><!-- Generator: GNU source-highlight 3.1.8
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
-<pre><tt>robot<span style="color: #990000">.</span>getJointPosition # returns the current position of a joint given the joint name
-<pre><tt>robot<span style="color: #990000">.</span>getJointBounds # returns the current joint bounds of a joint given the joint name
-<pre><tt>robot<span style="color: #990000">.</span>setJointBounds # set the joint bounds of a joint given the joint name, and an array containing the min and max values in radians
-computeJacobian #compute the jacobian matrix given the problem solver and a configuration
+<pre><tt><span style="font-style: italic"><span style="color: #9A1900"># returns the current position of a joint given the joint name</span></span>
+robot<span style="color: #990000">.</span>getJointPosition
+
+<span style="font-style: italic"><span style="color: #9A1900"># returns the current joint bounds of a joint given the joint name</span></span>
+robot<span style="color: #990000">.</span>getJointBounds
+
+<span style="font-style: italic"><span style="color: #9A1900"># set the joint bounds of a joint given the joint name, and an array containing the min and max values in radians</span></span>
+robot<span style="color: #990000">.</span>setJointBounds
+
+<span style="font-style: italic"><span style="color: #9A1900"># compute the jacobian matrix given the problem solver and a configuration</span></span>
+computeJacobian</tt></pre></div></div>
 </div>
 </div>
 </div>
@@ -803,7 +829,8 @@ computeJacobian #compute the jacobian matrix given the problem solver and a conf
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-14 19:41:06 CEST
+Last updated
+ 2019-09-26 08:17:20 CEST
 </div>
 </div>
 </body>

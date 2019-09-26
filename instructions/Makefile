@@ -1,6 +1,7 @@
 SOURCES = \
 	exercise-1.asciidoc \
-	exercise-2.asciidoc
+	exercise-2.asciidoc \
+	exercise-3.asciidoc
 
 HTML_FILES=$(SOURCES:%.asciidoc=%.html)
 

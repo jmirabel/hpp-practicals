@@ -1,0 +1,78 @@
+Implementing an inverse kinematics solver
+=========================================
+
+Objective
+---------
+
+Test different implementations of an inverse kinematics solver to understand the fundamental differences between them.
+
+Instructions
+------------
+As before, open 3 terminals.
+In the first terminal, type
+[source,sh]
+----
+hppcorbaserver
+----
+
+In the second terminal, type
+[source,sh]
+----
+gepetto-gui
+----
+
+In the third terminal, cd into hpp-practicals directory and type
+[source,sh]
+----
+cd script/ik
+ipython -i ik.py
+----
+
+You should see the manipulator robot ur-5 in an empty scene.
+
+In the third terminal, you should see the message "TODO: implement inverse kinematics solver". Open file +script/ik.py+ in a text editor. The message is produced by the function +ik+.
+
+Question 1
+----------
+
+Fill the method +ik+ such that it solves iteratively the inverse kinematics problem to match the end effector joint (+wrist_3_joint+) with the target 3D position passed as parameter.
+To approximate the inverse method of the jacobian matrix, use the jacobian transpose method. To visualize the solver output at each step
+of the algorithm, display the temporary configuration obtained at each step, and use an active pause mechanism to obtain a constant refreshing step. For instance, you can use the +sleep+ python method with a value of +1./25.+ to obtain about +25+ frames par second rate.
+
+What is the issue with the last target given in the example file ?
+How can you deal with the issue ?
+
+Question 2
+----------
+Compare the jacobian transpose method with the pseudo inverse method (Look in the numpy API to find the pseudo inverse method).
+In particular, observe the behaviour of the two solvers when going from the first to the second target.
+
+Explain what is happening and why. Which solver is the faster to converge ?
+
+
+Question 3
+----------
+Using the method +setJointBounds+ of the +Robot+ class, define joint limits for the joint of the robot.
+
+Propose and implement a way to handle joint limits in the inverse kinematics solver.
+
+
+Hint
+----
+
+Some useful methods
+~~~~~~~~~~~~~~~~~~~
+[source,python]
+----
+# returns the current position of a joint given the joint name
+robot.getJointPosition
+
+# returns the current joint bounds of a joint given the joint name
+robot.getJointBounds
+
+# set the joint bounds of a joint given the joint name, and an array containing the min and max values in radians
+robot.setJointBounds
+
+# compute the jacobian matrix given the problem solver and a configuration
+computeJacobian
+----
