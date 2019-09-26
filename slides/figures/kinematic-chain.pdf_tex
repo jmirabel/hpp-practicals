@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file 'kinematic-chain.pdf' (pdf, eps, ps)
 %%
@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{579.25584106bp}%
+    \setlength{\unitlength}{530.0098938bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,26 +48,32 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.5705836)%
-    \put(0,0){\includegraphics[width=\unitlength]{kinematic-chain.pdf}}%
-    \put(0.33049552,0.47798863){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{T3}}}%
-    \put(0.34036039,0.34530607){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{R3}}}%
-    \put(0.06775513,0.16237077){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{R1}}}%
-    \put(0.29680964,0.18163587){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{R1}}}%
-    \put(0.42426384,0.18015612){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{R1}}}%
-    \put(0.06094052,0.02447496){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{R1}}}%
-    \put(0.29848668,0.03612898){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{R1}}}%
-    \put(0.42771654,0.03662223){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{R1}}}%
-    \put(0.69475481,0.52169005){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_0$}}}%
-    \put(0.7196607,0.29867794){\color[rgb]{0,0,0}\rotatebox{92.30970331}{\makebox(0,0)[lb]{\smash{...}}}}%
-    \put(0.72488793,-0.00562644){\color[rgb]{0,0,0}\rotatebox{92.30970331}{\makebox(0,0)[lb]{\smash{...}}}}%
-    \put(0.69377298,0.4547574){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_1$}}}%
-    \put(0.69377307,0.39616301){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_2$}}}%
-    \put(0.70542477,0.22315398){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_i$}}}%
-    \put(0.7044429,0.15622131){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_{i+1}$}}}%
-    \put(0.70444299,0.09762697){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_{i+2}$}}}%
-    \put(0.04962111,0.35762073){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\body_0$}}}%
-    \put(-0.00249297,0.24967715){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\body_1$}}}%
-    \put(-0.00458562,0.11435203){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\body_2$}}}%
+  \begin{picture}(1,0.6839448)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{kinematic-chain.pdf}}%
+    \put(0.37198502,0.44216504){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{SE(3)}}}%
+    \put(0.0740506,0.24223227){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{R1}}}%
+    \put(0.32438775,0.2632874){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{R1}}}%
+    \put(0.46368437,0.26167016){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{R1}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{kinematic-chain.pdf}}%
+    \put(0.06660282,0.09152385){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{R1}}}%
+    \put(0.32622061,0.10426071){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{R1}}}%
+    \put(0.46745789,0.10479979){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{R1}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{kinematic-chain.pdf}}%
+    \put(0.05423166,0.45562392){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\body_0$}}}%
+    \put(-0.0027246,0.33765074){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\body_1$}}}%
+    \put(-0.0050117,0.18975186){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\body_2$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{kinematic-chain.pdf}}%
+    \put(0.7550604,0.46604024){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_3$}}}%
+    \put(0.7732255,0.22230554){\color[rgb]{0,0,0}\rotatebox{92.30970331}{\makebox(0,0)[lb]{\smash{...}}}}%
+    \put(0.77893965,-0.00461192){\color[rgb]{0,0,0}\rotatebox{92.30970331}{\makebox(0,0)[lb]{\smash{...}}}}%
+    \put(0.75506538,0.40933031){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_4$}}}%
+    \put(0.75506547,0.35300035){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_5$}}}%
+    \put(0.75766529,0.18337659){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_i$}}}%
+    \put(0.75773586,0.12699015){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_{i+1}$}}}%
+    \put(0.75773595,0.06898913){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_{i+2}$}}}%
+    \put(0.7555308,0.63661244){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_0$}}}%
+    \put(0.75522015,0.58157363){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_1$}}}%
+    \put(0.75522024,0.52357256){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_2$}}}%
+    \put(0.75481608,0.29863461){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$q_6$}}}%
   \end{picture}%
 \endgroup%

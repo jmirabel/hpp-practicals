@@ -32,6 +32,8 @@
 \usepackage[frenchb]{babel}
 \usepackage{aeguill}
 \usepackage{import}
+%\usepackage{leftidx}
+\usepackage{mathtools}
 
 \newcommand\vect[1]{\textbf{#1}}
 \newcommand\CS{{\cal C}}
@@ -39,6 +41,7 @@
 \newcommand\real{\mathbb{R}}
 \newcommand\Sone{\mathbb{S}^1}
 \newcommand\conf{\textbf{q}}
+\newcommand\M[2]{\prescript{#1}{}M_{#2}}
 \newcommand\x{\vect{x}}
 \newcommand\y{\vect{y}}
 \newcommand\z{\vect{z}}
@@ -73,12 +76,12 @@
 \definecolor{grey}{rgb}{0.5,0.5,0.5}
 
 
-\title {Motion planning}
+\title {Planification de mouvement}
 
 \subtitle{}
 
 \author[]
-{Florent Lamiraux}
+{Joseph Mirabel}
 
 \institute[CNRS-LAAS] % (facultatif mais généralement nécessaire)
 {
@@ -104,15 +107,39 @@ tabsize=3,
   \titlepage
 \end{frame}
 
-%\input{intro}
-\begin{frame}{Motion planning}
+\section{Introduction}
+\begin{frame}{Planification de mouvement}
   \tableofcontents[currentsection,currentsubsection]
   % Vous pouvez, si vous le souhaiter ajouter l'option [pausesections]
 \end{frame}
-
 \input {introduction}
-\input {definitions}
+
+\section{Cha\^ine cin\'ematique}
+\begin{frame}{Planification de mouvement}
+  \tableofcontents[currentsection,currentsubsection]
+  % Vous pouvez, si vous le souhaiter ajouter l'option [pausesections]
+\end{frame}
+\input {kinematic_chain}
+
+\section{Algorithmes}
+\begin{frame}{Planification de mouvement}
+  \tableofcontents[currentsection,currentsubsection]
+  % Vous pouvez, si vous le souhaiter ajouter l'option [pausesections]
+\end{frame}
 \input {random-methods}
+
+\section{Planification sous contraintes}
+\begin{frame}{Planification de mouvement}
+  \tableofcontents[currentsection,currentsubsection]
+  % Vous pouvez, si vous le souhaiter ajouter l'option [pausesections]
+\end{frame}
+\input {constrained-planning}
+
+\section{D\'etection de collision}
+\begin{frame}{Planification de mouvement}
+  \tableofcontents[currentsection,currentsubsection]
+  % Vous pouvez, si vous le souhaiter ajouter l'option [pausesections]
+\end{frame}
 \input {static-collision-checking}
 
 \end{document}

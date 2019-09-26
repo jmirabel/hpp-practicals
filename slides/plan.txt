@@ -1,0 +1,80 @@
+===== Cours 1 et 2 =================================
+
+1. Introduction
+
+2. Chaine cinématique
+  - type d'articulations.
+  - variables articulaires, position des corps.
+  - jacobienne (1ère mention rapide).
+  - justification des quaternions.
+
+3. Quelques définitions
+
+4. Algorithmes
+  a. Algorithmes déterministes:
+    - discretisation
+    - diagrammes de Voronoï, décomposition cellulaire, champs de potentiel
+  b. Algorithmes probabilistiquement complets:
+    - PRM,
+    - RRT.
+
+5. Planification sous contraintes
+  a. présentation du cadre
+    - cas d'usage
+    - quelques définitions
+    - quelques fonctions exemples (position, orientation, COM)
+  b. pour les configurations
+    - méthode exacte.
+    - méthode iterative (Newton-Raphson, conditions KKT pour les limites articulaires).
+    - comparaisons des méthodes.
+  c. pour les trajectoires (seulement mettre en évidence le problème)
+
+===== Cours 3 =================================
+
+6. Test de collision
+  a. pour les configurations
+    - BVH (GUI)
+    - GJK (tableau, prévoir quelques images)
+  b. pour les trajectoires
+    - discretisation: mettre en évidence le problème
+    - validation par intervalle.
+
+7. Jacobienne
+  a. vitesse
+  b. force
+
+===== TP =================================
+
+1. preparation des TPs
+  Questions pour Michel et / ou les élèves:
+  a. programmation
+  b. infrastucture CORBA: HPP / Client Python ou C++ / Viewer
+  c. API HPP
+
+===== TP 1 =================================
+
+2. Inverse cinématique
+  a. implementer Newton Raphson (ur5)
+    - bonus 1: hierarchie de taches.
+    - bonus 2: limites articulaires.
+      fonction de cout, condition KKT, saturation
+    - bonus 3: test sur romeo avec COM, pied droit, pied gauche.
+      tache de posture ?
+    - bonus 4: optimiser la manipulabilité
+
+===== TP 2 =================================
+
+3. Algorithme de planification
+  a. RRT
+    - bonus: planification sous contraintes
+    - bonus: RRT*
+  b. PRM
+  c. RandomShortcut
+
+===== TP bonus  =================================
+
+4. Planification pour véhicule non-holonome ?
+4. Planification kinodynamique
+4. Test de collision ?
+  a. GJK dans le plan ?
+    - bonus EPA ?

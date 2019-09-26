@@ -1,23 +1,47 @@
 %\section {Random methods}
 
 %
+%  histoire
+%
+
+\begin{frame}[<+->]{Un peu d'histoire}
+  Les premi\`eres approches sont d\'eterministes :
+  \begin{itemize}
+    \item discretisation,
+      \begin{itemize}
+        \item dimensionnalit\'e
+      \end{itemize}
+    \item diagrammes de Vorono\"i
+      \begin{itemize}
+        \item dur \`a g\'en\'eraliser pour plus de 2-3 dimensions.
+        \item dimensionnalit\'e
+      \end{itemize}
+    \item décomposition cellulaire
+      \begin{itemize}
+        \item dur \`a g\'en\'eraliser pour plus de 2-3 dimensions.
+        \item dimensionnalit\'e
+      \end{itemize}
+    \item champs de potentiel
+      \begin{itemize}
+        \item dur \`a g\'en\'eraliser pour des corps complexes,
+        \item sujet au prob\`eme des minimums locaux.
+      \end{itemize}
+  \end{itemize}
+  \onslide+<+->{\'Emergence de m\'ethodes al\'eatoires dans les ann\'ees 1990.}
+\end{frame}
+
+%
 %  random methods
 %
 
-\begin{frame} {Random methods}
+\begin{frame} {M\'ethodes al\'eatoires}
+  Principe :
   \begin{itemize}
-  \item In the early 1990's, random methods started being developed
-    \pause
-  \item Principle
-    \begin{itemize}
-    \item shoot random configurations
+    \item tirer une configuration al\'eatoire,
       \pause
-    \item test whether they are in collision
+    \item construire un graphe (carte) dont les noeuds sont des configurations,
       \pause
-    \item build a graph (roadmap)  the nodes of which are free configurations
-      \pause
-    \item  and the edges of which are collision-free linear interpolations
-    \end{itemize}
+    \item et dont les ar\^etes sont des interpolations lin\'eaires sans collision.
   \end{itemize}
 \end{frame}
 
@@ -135,13 +159,13 @@
 
 \begin{frame} {Probabilistic roadmap (PRM)}
   \begin{itemize}
-  \item A lot of useless nodes are created,
+  \item Beaucoup de noeuds inutiles sont cr\'e\'es,
     \begin{itemize}
-    \item this increases the cost to connect new nodes to the existing roadmap
+    \item cela augmente le co\^ut de connexion de nouveaux noeuds \'a la carte courrante.
     \end{itemize}
-  \item Improvement: visibility-based PRM
+  \item Am\'elioration: Visibility-based PRM
     \begin{itemize}
-    \item Only \textit{interesting} nodes are kept.
+    \item Seul les noeuds \textit{int\'eressants} sont gard\'es.
     \end{itemize}
   \end{itemize}
 \end{frame}
@@ -368,27 +392,27 @@
 % random methods
 %
 
-\begin{frame} {Random methods}
+\begin{frame} {M\'ethodes al\'eatoires}
   \begin{itemize}
-  \item Pros:
+  \item Avantages:
     \begin{itemize}
-    \item no explicit computation of the free configuration space,
-    \item easy to implement,
-    \item robust.
+    \item pas de calcul explicites de l'espace des configurations libres,
+    \item facile \'a impl\'ementer,
+    \item robuste.
     \end{itemize}
     \pause
-  \item Cons:
+  \item Inconv\'enients:
     \begin{itemize}
-    \item no completeness property, only probabilistic completeness,
-    \item difficult to find narrow passages.
+    \item pas de compl\'etude, seulement une compl\'etude en probabilit\'e.
+    \item difficile de trouver un passage \'etroit.
     \end{itemize}
     \pause
-  \item Requested operators~:
+  \item Op\'erations requises~:
     \begin{itemize}
-    \item Collision tests
+    \item test de collisions
       \begin{itemize}
-      \item for configurations (static),
-      \item for paths (dynamic)
+      \item pour des configurations (statique),
+      \item pour des chemins (dynamique)
       \end{itemize}
     \end{itemize}
   \end{itemize}

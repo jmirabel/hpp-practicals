@@ -1,0 +1,91 @@
+% a. présentation du cadre
+%   - cas d'usage
+%   - quelques définitions
+%   - quelques fonctions exemples (position, orientation, COM)
+% b. pour les configurations
+%   - méthode exacte.
+%   - méthode iterative (Newton-Raphson, conditions KKT pour les limites articulaires).
+%   - comparaisons des méthodes.
+% c. pour les trajectoires (seulement mettre en évidence le problème)
+
+\begin{frame} {Motivations}
+  \begin{itemize}
+    \item Comment g\'en\'erer une configuration satisfaisant des crit\`eres g\'eom\'etriques ?
+      \begin{itemize}
+        \item position,
+        \item orientation,
+        \item centre de masse,
+        \item visibilit\'e,
+        \item \ldots
+      \end{itemize}
+      \pause
+    \item Interpolation lin\'eraire dans $\CS$:
+      \begin{itemize}
+        \item courbe non lin\'eraire dans $\WS$
+      \end{itemize}
+      \pause
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[<+->]{D\'efinition}
+  \emph{Contrainte} : une equation de la forme $$f(q) = 0$$
+  \begin{itemize}
+    \item<2-> $f \in \mathcal{C}^1(\CS, \real^m)$,
+    \item<3-> $m$ est la dimension de la contrainte.
+  \end{itemize}
+
+  \onslide+<4->{
+    Quelques exemples :
+    \begin{itemize}
+      \item<5-> position,
+      \item<6-> centre de masse,
+      \item<7-> orientation.
+    \end{itemize}
+  }
+\end{frame}
+
+\begin{frame}[<+->]{R\'esolution exacte}
+  \begin{itemize}
+    \item donne l'ensemble des solutions d'une contrainte : ${ q\in\CS, f(q) = 0}$,
+    \item possible pour certaines contraintes mais :
+      \begin{itemize}
+        \item sp\'ecifique \`a chaque cas,
+        \item complexes \`a impl\'ementer,
+        \item difficile, voire impossible \`a combiner.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[<+->]{R\'esolution num\'erique}
+  \emph{M\'ethode it\'erative}
+  \begin{itemize}
+    \item si $ || f(\conf_n) || < \epsilon $ alors $\conf_n$ est une solution,
+    \item calcul de la d\'eriv\'ee de $f$ :
+      $$J = \frac{\partial f}{\partial \conf}$$
+    \item calcul de $\conf_{n+1}$ avec une approximation
+      \begin{itemize}
+        \item du 1er ordre
+          $$\conf_{n+1} = \conf_n - \alpha \left( \frac{||f(\conf_n)||^2}{2 ||J^T f(\conf_n)||^2} \right) J^{T} f(\conf_n), \alpha\in]0,1] $$
+        \item du 2nd ordre: $J^{\dagger}$ est la pseudo-inverse de $J$
+          $$\conf_{n+1} = \conf_n - \alpha J^{\dagger} f(\conf_n), \alpha\in]0,1] $$
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[<+->]{Digression: pseudo-inverse}
+  Soit $J\in\mathcal{M}_{m,n}(\real), n \ge m$ et soit le probl\`eme 
+  $J x = b$.
+
+  \begin{itemize}
+    \item $x^* = J^{\dagger} b$ est la solution de norme minimale.
+    \item la matrice $I_n - J^\dagger J$ est un projecteur sur le noyau de $J$.
+    \item l'ensemble des solutions est $\left\{ x^* + (I_n - J^\dagger J) u, u\in\real^n \right\}$.
+  \end{itemize}
+\end{frame}
+
+%\begin{frame}[<+->]{Digression: espace null (noyau) d'une matrice}
+%  Soit $J\in\mathcal{M}_{n,m}(\real), n \ge m$.
+%  La pseudo-inverse $J^{\dagger}$ de $J$ est l'unique matrice qui v\'erifie.
+%  alors $J$
+%%utilisation de la d\'ecomposition en valeur singuli\`ere (SVD):
+%\end{frame}
