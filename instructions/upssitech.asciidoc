@@ -1,0 +1,36 @@
+Préparation du TP
+=================
+:Author: Joseph Mirabel
+:Email:  joseph.mirabel@laas.fr
+
+Ouvrir un terminal et aller dans un répertoire de votre choix. Taper les instructions suivantes.
+[source,sh]
+----
+git clone --branch upssitech-2019 https://github.com/jmirabel/hpp-practicals
+cd hpp-practicals
+----
+
+Quelques informations
+---------------------
+
+Vous allez utiliser deux logiciels :
+
+- https://humanoid-path-planner.github.io/hpp-doc/[Humanoid Path Planner] (HPP) : librairie pour le calcul de trajectoire de robots,
+- gepetto-gui : un visualisateur de robot.
+
+Ces deux logiciels indépendants fonctionnent selon le même principe.
+On démarre un serveur (+hppcorbaserver+ et +gepetto-gui+) puis on contrôle le serveur avec un script Python.
+Dans tous les exercices, vous devrez commencer par lancer les deux serveurs.
+
+Exercices
+---------
+
+Pensez à lire toute la page d'un exercice avant de commencer votre travail.
+Pour accéder aux instructions des deux exercices, taper
+[source,sh]
+----
+firefox instructions/exercise-1.html
+firefox instructions/exercise-3.html
+----
+
+  !!! L'exercice 2 n'est pas à faire !!!
