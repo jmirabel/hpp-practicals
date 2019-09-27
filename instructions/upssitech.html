@@ -751,6 +751,14 @@ by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
 <pre><tt>git clone --branch upssitech-<span style="color: #993399">2019</span> https<span style="color: #990000">:</span>//github<span style="color: #990000">.</span>com/jmirabel/hpp-practicals
+
+git clone --branch upssitech-<span style="color: #993399">2019</span> https<span style="color: #990000">:</span>//github<span style="color: #990000">.</span>com/humanoid-path-planner/hpp-environments
+ln -s hpp-environments hpp_environments
+
+gedit <span style="color: #990000">~</span>/Bureau/cours-planification-de-mouvement<span style="color: #990000">.</span>bash
+<span style="font-style: italic"><span style="color: #9A1900"># Ajouter a la fin du fichier :</span></span>
+<span style="font-style: italic"><span style="color: #9A1900"># export ROS_PACKAGE_PATH=chemin_parent_de_hpp_environments:$ROS_PACKAGE_PATH</span></span>
+
 cd hpp-practicals</tt></pre></div></div>
 </div>
 </div>
@@ -801,7 +809,8 @@ Pour accéder aux instructions des deux exercices, taper</p></div>
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
-<pre><tt>firefox instructions/exercise-<span style="color: #993399">1</span><span style="color: #990000">.</span>html
+<pre><tt>evince instructions/preliminaries<span style="color: #990000">.</span>pdf
+firefox instructions/exercise-<span style="color: #993399">1</span><span style="color: #990000">.</span>html
 firefox instructions/exercise-<span style="color: #993399">3</span><span style="color: #990000">.</span>html</tt></pre></div></div>
 <div class="admonitionblock">
 <table><tr>
@@ -818,7 +827,7 @@ firefox instructions/exercise-<span style="color: #993399">3</span><span style="
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2019-09-27 08:40:39 CEST
+ 2019-09-27 11:40:24 CEST
 </div>
 </div>
 </body>
