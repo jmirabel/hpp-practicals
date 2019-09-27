@@ -7,6 +7,14 @@ Ouvrir un terminal et aller dans un répertoire de votre choix. Taper les instru
 [source,sh]
 ----
 git clone --branch upssitech-2019 https://github.com/jmirabel/hpp-practicals
+
+git clone --branch upssitech-2019 https://github.com/humanoid-path-planner/hpp-environments
+ln -s hpp-environments hpp_environments
+
+gedit ~/Bureau/cours-planification-de-mouvement.bash
+# Ajouter a la fin du fichier :
+# export ROS_PACKAGE_PATH=chemin_parent_de_hpp_environments:$ROS_PACKAGE_PATH
+
 cd hpp-practicals
 ----
 
@@ -38,6 +46,7 @@ Pensez à lire toute la page d'un exercice avant de commencer votre travail.
 Pour accéder aux instructions des deux exercices, taper
 [source,sh]
 ----
+evince instructions/preliminaries.pdf
 firefox instructions/exercise-1.html
 firefox instructions/exercise-3.html
 ----

@@ -27,5 +27,5 @@ from motion_planner import MotionPlanner
 m = MotionPlanner (robot, ps)
 pathId = m.solveBiRRT (maxIter = 1000)
 
-pp = PathPlayer (robot.client, r)
+pp = PathPlayer (r, robot.client)
 #pp (pathId)
