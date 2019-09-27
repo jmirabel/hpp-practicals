@@ -22,6 +22,15 @@ Ces deux logiciels indépendants fonctionnent selon le même principe.
 On démarre un serveur (+hppcorbaserver+ et +gepetto-gui+) puis on contrôle le serveur avec un script Python.
 Dans tous les exercices, vous devrez commencer par lancer les deux serveurs.
 
+[IMPORTANT]
+====
+Dans chaque terminal que vous ouvrirez, vous devez commencer par entrer
+[source,sh]
+----
+source ~/Bureau/cours-planification-de-mouvement.bash
+----
+====
+
 Exercices
 ---------
 
@@ -33,4 +42,4 @@ firefox instructions/exercise-1.html
 firefox instructions/exercise-3.html
 ----
 
-  !!! L'exercice 2 n'est pas à faire !!!
+WARNING: L'exercice 2 n'est pas à faire !!!
