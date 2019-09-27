@@ -8,12 +8,12 @@ Ouvrir un terminal et aller dans un répertoire de votre choix. Taper les instru
 ----
 git clone --branch upssitech-2019 https://github.com/jmirabel/hpp-practicals
 
-git clone --branch upssitech-2019 https://github.com/humanoid-path-planner/hpp-environments
+git clone https://github.com/humanoid-path-planner/hpp-environments
 ln -s hpp-environments hpp_environments
 
 gedit ~/Bureau/cours-planification-de-mouvement.bash
 # Ajouter a la fin du fichier :
-# export ROS_PACKAGE_PATH=chemin_parent_de_hpp_environments:$ROS_PACKAGE_PATH
+# export ROS_PACKAGE_PATH=chemin_parent_de_hpp_environments:$ROS_PACKAGE_PATH
 
 cd hpp-practicals
 ----
