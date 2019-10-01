@@ -13,7 +13,8 @@ def computeJacobian(ps, q):
 	if not __init:
 		#prepare jacobian computation
 		ps.createPositionConstraint("pos_cons", 'wrist_3_joint', '', [0,0,0], [0,0,0], [True,True,True])
-		ps.setNumericalConstraints("pos_num_cons",["pos_cons"])
+		ps.resetConstraints()
+		ps.addNumericalConstraints("pos_num_cons",["pos_cons"])
 		__init = True
 	return array(ps.computeValueAndJacobian(q)[1])
 
