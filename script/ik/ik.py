@@ -22,7 +22,7 @@ boxname = scene+"/t0"
 target = [0,0,0,0,0,0,1]
 gui.addBox(boxname,0.03,0.03,0.03, [1,1,1,1])
 gui.applyConfiguration(boxname,target)
-gui.addSceneToWindow(scene,0)
+gui.addToGroup(scene,r.sceneName)
 gui.refresh()
 
 
