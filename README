@@ -1,0 +1,4 @@
+# Instructions for launch the docker
+
+docker build -t upsitech_motionplanning:2020 .
+docker run -it --name upsitech-2020-container --rm  -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY upsitech_motionplanning:2020
