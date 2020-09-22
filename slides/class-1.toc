@@ -1,2 +1,6 @@
-\beamer@endinputifotherversion {3.24pt}
-\select@language {french}
+\babel@toc {french}{}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Cha\^ine cin\'ematique}{6}{0}{2}
+\beamer@sectionintoc {3}{Algorithmes}{41}{0}{3}
+\beamer@sectionintoc {4}{Planification sous contraintes}{114}{0}{4}
+\beamer@sectionintoc {5}{D\'etection de collision}{138}{0}{5}

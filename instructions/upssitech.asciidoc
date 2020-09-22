@@ -6,15 +6,7 @@ Préparation du TP
 Ouvrir un terminal et aller dans un répertoire de votre choix. Taper les instructions suivantes.
 [source,sh]
 ----
-git clone --branch upssitech-2019 https://github.com/jmirabel/hpp-practicals
-
-git clone https://github.com/humanoid-path-planner/hpp-environments
-ln -s hpp-environments hpp_environments
-
-gedit ~/Bureau/cours-planification-de-mouvement.bash
-# Ajouter a la fin du fichier :
-# export ROS_PACKAGE_PATH=chemin_parent_de_hpp_environments:$ROS_PACKAGE_PATH
-
+git clone --branch upssitech-2020 https://github.com/jmirabel/hpp-practicals
 cd hpp-practicals
 ----
 
@@ -35,7 +27,7 @@ Dans tous les exercices, vous devrez commencer par lancer les deux serveurs.
 Dans chaque terminal que vous ouvrirez, vous devez commencer par entrer
 [source,sh]
 ----
-source ~/Bureau/cours-planification-de-mouvement.bash
+source hpp-practicals/script/config.sh
 ----
 ====
 

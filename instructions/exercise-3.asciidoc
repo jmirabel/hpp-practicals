@@ -64,15 +64,9 @@ Some useful methods
 ~~~~~~~~~~~~~~~~~~~
 [source,python]
 ----
-# returns the current position of a joint given the joint name
-robot.getJointPosition
-
 # returns the current joint bounds of a joint given the joint name
 robot.getJointBounds
 
 # set the joint bounds of a joint given the joint name, and an array containing the min and max values in radians
 robot.setJointBounds
-
-# compute the jacobian matrix given the problem solver and a configuration
-computeJacobian
 ----
