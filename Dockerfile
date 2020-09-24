@@ -14,7 +14,7 @@ RUN apt upgrade --yes
 
 #RUN apt install --yes --quiet robotpkg-romeo-description
 RUN DEBIAN_FRONTEND="noninteractive" apt install --yes --quiet robotpkg-py36-hpp-manipulation-corba robotpkg-py36-qt5-hpp-gepetto-viewer
-RUN apt install --yes --quiet robotpkg-py36-hpp-universal-robot robotpkg-py36-qt5-hpp-gui robotpkg-py36-qt5-hpp-plot
+RUN apt install --yes --quiet robotpkg-py36-qt5-hpp-gui robotpkg-py36-qt5-hpp-plot
 
 RUN apt install --yes --quiet ipython3 python3-numpy
 
