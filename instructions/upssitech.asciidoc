@@ -27,7 +27,7 @@ Dans tous les exercices, vous devrez commencer par lancer les deux serveurs.
 Dans chaque terminal que vous ouvrirez, vous devez commencer par entrer
 [source,sh]
 ----
-source hpp-practicals/script/config.sh
+source script/config.sh
 ----
 ====
 

@@ -24,7 +24,7 @@ In the third terminal, type
 [source,sh]
 ----
 cd script
-ipython -i rrt.py
+ipython3 -i rrt.py
 ----
 
 image::hpp-gui-ur5.png[width="40%",alt="hpp-gui graphical interface"]

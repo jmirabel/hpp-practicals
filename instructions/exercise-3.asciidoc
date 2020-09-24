@@ -25,7 +25,7 @@ In the third terminal, cd into hpp-practicals directory and type
 [source,sh]
 ----
 cd script/ik
-ipython -i ik.py
+ipython3 -i ik.py
 ----
 
 You should see the manipulator robot ur-5 in an empty scene.
