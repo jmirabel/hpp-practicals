@@ -1,5 +1,5 @@
 from __future__ import print_function
-from hpp.corbaserver.ur5 import Robot
+from robot import Robot
 from hpp.corbaserver import ProblemSolver, newProblem
 from hpp.gepetto import ViewerFactory, PathPlayer
 import numpy as np
