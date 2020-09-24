@@ -38,7 +38,6 @@ Pensez à lire toute la page d'un exercice avant de commencer votre travail.
 Pour accéder aux instructions des deux exercices, taper
 [source,sh]
 ----
-evince instructions/preliminaries.pdf
 firefox instructions/exercise-1.html
 firefox instructions/exercise-3.html
 ----
